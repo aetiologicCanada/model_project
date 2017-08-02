@@ -6,13 +6,26 @@ language:
   ui:
     edit: "Edit"
     chapter_name: "Chapter "
-rmd_subdir: "sandbox"
+
+rmd_subdir: "reports/sandbox"
+fig_caption: yes
 rmd_files:
-  html: ["sandbox/index.Rmd", "sandbox/01-intro.Rmd", "sandbox/02-literature.Rmd", "sandbox/03-method.Rmd", "sandbox/06-references.Rmd"]
+  html: ["reports/sandbox/index.Rmd", 
+  "reports/sandbox/01-intro.Rmd", 
+  "reports/sandbox/02-literature.Rmd", 
+  "reports/sandbox/03-method.Rmd", 
+  "reports/sandbox/04-models.Rmd",
+  "reports/sandbox/06-references.Rmd"]
+
+output: 
+  bookdown::gitbook: 
+   highlight: zenburn
   
-book_filename: "my-book.Rmd"
+book_filename: "test_VIHA.Rmd"
 #before_chapter_script: ["script1.R", "script2.R"]
 #after_chapter_script: "script3.R"
 #edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
 output_dir: "sandbox/book-output"
 clean: ["my-book.bbl", "R-packages.bib"]
+
+
